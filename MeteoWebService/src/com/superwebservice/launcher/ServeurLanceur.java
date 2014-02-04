@@ -15,7 +15,7 @@ public class ServeurLanceur {
 		
 		Endpoint endpoint1 = Endpoint.create(impl);
 		
-		endpoint1.publish("http://localhost:8090/hello"); //libre du port et de l'url
+		endpoint1.publish("http://localhost:8090/meteo"); //libre du port et de l'url
 		
 		System.out.println("Tapez QUIT pour arrêter");		
 		Scanner sc = new Scanner(System.in);

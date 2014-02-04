@@ -2,7 +2,7 @@
 <project name="cxf wsdl2java" basedir="." default="cxfWSDLToJava">   
 <!-- 2 lignes de property A MODIFIER -->
    <property name="cxf.home" location ="C:/Users/Stéphanie/Documents/POLY5/SOA/apache-cxf-2.7.0/apache-cxf-2.7.0"/> 
-   <property name="wsdl" value="http://localhost:8090/hello?wsdl"/>
+   <property name="wsdl" value="http://localhost:8090/meteo?wsdl"/>
 	
    <path id="cxf.classpath">
       <fileset dir="${cxf.home}/lib">

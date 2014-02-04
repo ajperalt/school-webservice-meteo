@@ -19,7 +19,7 @@
 					</xsd:complexType>
 				</xsd:element>
 
-				<!-- On a un complextype "produitS" composé de plusieurs "produit" -->
+				<!-- On a un complextype "produitS" compose de plusieurs "produit" -->
 				<xsd:element name="WeatherResponse">
 					<xsd:complexType>
 						<xsd:sequence>
