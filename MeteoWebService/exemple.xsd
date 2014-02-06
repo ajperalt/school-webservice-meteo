@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema targetNamespace="http://www.leuville.com/commande" 
+	xmlns:tns="http://www.leuville.com/commande" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<xsd:element name="situation-meteo" >
+	<xsd:complexType>
+		<xsd:sequence>
+		
+		 <tns:element name="GetWeather">
+			<tns:complexType>
+			    <tns:sequence>
+			       <tns:element minOccurs="0" maxOccurs="1" name="CityName" type="tns:string" />
+			       <tns:element minOccurs="0" maxOccurs="1" name="CountryName" type="tns:string" />
+			    </tns:sequence>
+		    </tns:complexType>
+		  </tns:element>
+				
+			<!--  On a un complextype "produitS" composé de plusieurs "produit" -->
+			<xsd:element name="reponse-meteo">
+				<xsd:complexType>
+					<xsd:element name="meteo">
+						<xsd:complexType>
+							<xsd:sequence>							             
+								<xsd:element name="lieu" type="xsd:string" />   
+								<xsd:element name="date-heure" type="xsd:string" />
+								<xsd:element name="vent" type="xsd:string" />
+								<xsd:element name="visibilite" type="xsd:string" />
+								<xsd:element name="ciel" type="xsd:string" />
+								<xsd:element name="temperature" type="xsd:string" /> 
+								<xsd:element name="point-rosee" type="xsd:string" />
+								<xsd:element name="humidite" type="xsd:string" />
+								<xsd:element name="pression" type="xsd:string" />
+								<xsd:element name="status" type="xsd:string" />        						             
+							</xsd:sequence>
+					</xsd:complexType>
+					</xsd:element>
+				</xsd:complexType>
+			</xsd:element>
+
+
+	<xsd:complexType name="produit">
+		<xsd:sequence>
+			<xsd:element name="reference" type="xsd:string" />
+			<xsd:element name="quantite" type="xsd:int" />
+			<xsd:element name="prixUnitaireHT" type="xsd:float" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+</xsd:schema>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema targetNamespace="http://www.superwebservice.com/publictypes"
+	xmlns:tns="http://www.superwebservice.com/publictypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<xsd:element name="WeatherPacket">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="WeatherRequest">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element minOccurs="0" maxOccurs="1" name="CityName"
+								type="xsd:string" />
+							<xsd:element minOccurs="0" maxOccurs="1" name="CountryName"
+								type="xsd:string" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+				<!-- On a un complextype "produitS" compose de plusieurs "produit" -->
+				<xsd:element name="WeatherResponse">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="lieu" type="xsd:string" />
+							<xsd:element name="date_heure" type="xsd:string" />
+							<xsd:element name="vent" type="xsd:string" />
+							<xsd:element name="visibilite" type="xsd:string" />
+							<xsd:element name="ciel" type="xsd:string" />
+							<xsd:element name="temperature" type="xsd:string" />
+							<xsd:element name="point_rosee" type="xsd:string" />
+							<xsd:element name="humidite" type="xsd:string" />
+							<xsd:element name="pression" type="xsd:string" />
+							<xsd:element name="status" type="xsd:string" />
+							<xsd:element name="unique_token" type="xsd:string" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
