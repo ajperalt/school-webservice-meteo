@@ -3,12 +3,14 @@ package com.superwebservice.core;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
 
 import com.superwebservice.publictypes.*;
 import com.superwebservice.publictypes.WeatherPacket.WeatherRequest;
 import com.superwebservice.publictypes.WeatherPacket.WeatherResponse;
 
-@WebService
+@WebService (targetNamespace = "http://www.superwebservice.com/publictypes", name = "Meteo")
+@SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 public class ServeurWeather {
 
 	//Récupère la situation météo en envoyant son unique_request
